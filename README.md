@@ -6,3 +6,5 @@ Requires:
   - flask
   - flask-wtf
   - flask-dotenv
+  - flask-sqlalchemy
+  - flask-migrate
