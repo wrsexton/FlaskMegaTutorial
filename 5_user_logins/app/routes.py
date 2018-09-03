@@ -4,11 +4,6 @@ from app.models import User
 from flask import render_template, flash, redirect
 from flask_login import current_user, login_user, logout_user
 
-@app.route('/logout')
-def logout():
-    logout_user()
-    return redirect(url_for('index'))
-
 @app.route('/')
 @app.route('/index')
 @login_required
@@ -40,4 +35,9 @@ def login():
         if not next_page or url_parse(next_page).netloc != '':
             next_page = url_for('index')
         return redirect(next_page)
-    return render_template('login.html', title='Sign In', form=form
+    return render_template('login.html', title='Sign In', form=form)
+
+@app.route('/logout')
+def logout():
+    logout_user()
+    return redirect(url_for('index'))
