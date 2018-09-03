@@ -8,3 +8,4 @@ Requires:
   - flask-dotenv
   - flask-sqlalchemy
   - flask-migrate
+  - flask-login
