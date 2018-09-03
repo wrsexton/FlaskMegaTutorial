@@ -42,4 +42,5 @@ def login():
 @app.route('/logout')
 def logout():
     logout_user()
+    print(url_for('index'))
     return redirect('/index')
